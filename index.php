@@ -1,5 +1,6 @@
 <?php
-        error_reporting('E_NONE');
+        #error_reporting('E_NONE');
+        error_reporting('E_ALL');
         $debug = 0;
 
         require_once 'filesystem.class.php';
@@ -91,10 +92,10 @@
             } else {
                 header('HTTP/1.1 500 Internal Server Error :(');    
                 # fappend('solutions.dat', "#03->" . $i . "<>" . $oo->{'params'}[$i] . "\n");
-                # echo "Nerror";
+                echo "Nerror";
             }
         } catch (Exception $e) {
             header('HTTP/1.1 500 Internal Server Error :(');
-            # echo $e->getMessage();
+            echo $e->getMessage();
         }
 ?>

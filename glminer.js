@@ -128,7 +128,7 @@ function meinWebGLStart(threads) {
         gl.uniform2fv(kLoc, k);
 }
 
-function readScript(n, callback) {
+function readScriptGL(n, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", n, true);
     xhr.send(null);
@@ -139,11 +139,11 @@ function readScript(n, callback) {
 };
 
 function onl() {
-    readScript('shader-vs.js', function (data) {
+    readScriptGL('shader-vs.js', function (data) {
         vShaderQuellcode = data;
     });
 
-    readScript('shader-fs.js', function (data) {
+    readScriptGL('shader-fs.js', function (data) {
         fShaderQuellcode = data;
     });
 };
